@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://bullet.gd" type="Script" id=1]
+[ext_resource path="res://space_invader/images/laser.png" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "bullet_player",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2.60863, 7.42719 )
+
+[node name="RigidBody2D" type="RigidBody2D"]
+position = Vector2( 43.0035, 33.0358 )
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "bullet_player"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.427189, 0.427187 )
+shape = SubResource( 2 )

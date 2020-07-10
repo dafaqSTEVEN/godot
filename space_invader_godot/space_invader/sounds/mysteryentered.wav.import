@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mysteryentered.wav-4cc1afb7721f1567286c5fba631226f7.sample"
+
+[deps]
+
+source_file="res://space_invader/sounds/mysteryentered.wav"
+dest_files=[ "res://.import/mysteryentered.wav-4cc1afb7721f1567286c5fba631226f7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
