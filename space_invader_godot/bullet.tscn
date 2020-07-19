@@ -15,18 +15,13 @@ radius = 9.08276
 height = 18.9929
 
 [node name="bullet" type="RigidBody2D"]
-position = Vector2( 0.657104, 3.94881 )
-z_index = -10
-collision_layer = 2
-collision_mask = 0
-mass = 0.00102041
 gravity_scale = 0.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 9.91759, 18.2702 )
+position = Vector2( 460.376, 466.58 )
 scale = Vector2( 0.0190259, 0.0392212 )
 frames = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 9.81151, 18.6802 )
+position = Vector2( 460.27, 466.99 )
 shape = SubResource( 2 )
