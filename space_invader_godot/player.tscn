@@ -22,3 +22,4 @@ frames = SubResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -7.92966, -26.4098, 5.84131, -26.4098, 24.4022, 2.32959, 24.4022, 17.298, 20.211, 24.4828, -21.7006, 24.4828, -26.4905, 19.0942, -26.4905, 2.92834 )
+[connection signal="body_entered" from="." to="." method="_on_player_body_entered"]

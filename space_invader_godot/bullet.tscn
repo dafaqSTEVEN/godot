@@ -15,12 +15,16 @@ animations = [ {
 radius = 11.6021
 height = 4.7641
 
-[node name="bullet" type="RigidBody2D"]
+[node name="bullet" type="RigidBody2D" groups=[
+"bullet",
+]]
 position = Vector2( -2.12132, -0.353554 )
 z_index = -10
 collision_layer = 2
-collision_mask = 0
+collision_mask = 2147483650
 gravity_scale = 0.0
+contacts_reported = 10
+contact_monitor = true
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -34,4 +38,5 @@ shape = SubResource( 2 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 position = Vector2( -0.353554, 3.8147e-06 )
+[connection signal="body_entered" from="." to="." method="_on_bullet_body_entered"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

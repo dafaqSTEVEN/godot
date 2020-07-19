@@ -22,3 +22,7 @@ func _process(delta: float) -> void:
 		
 
 
+
+
+func _on_player_body_entered(body: Node) -> void:
+	hide()

@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://space_invader/images/enemy_bullet.png" type="Texture" id=1]
+[ext_resource path="res://enemy_bullet.gd" type="Script" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "nor",
+"speed": 5.0
+} ]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+position = Vector2( -1.18918, -2.37842 )
+gravity_scale = 0.0
+contacts_reported = 1
+contact_monitor = true
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.481539, -1.9581 )
+scale = Vector2( 0.138742, 0.154203 )
+frames = SubResource( 1 )
+animation = "nor"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -97.4394, -69.0878 )
+scale = Vector2( 2.57579, -0.115918 )
+polygon = PoolVector2Array( 34.6571, -297.886, 40.502, -293.247, 41.4413, -334.994, 41.2326, -854.506, 38.9364, -884.657, 35.5964, -852.187, 35.3877, -518.215, 36.0139, -437.041 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 1.69443, -0.695831 )
+scale = Vector2( 1.12354, 3.44928 )
+[connection signal="body_entered" from="." to="." method="_on_RigidBody2D_body_entered"]
