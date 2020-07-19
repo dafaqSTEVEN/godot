@@ -1,6 +1,6 @@
 extends Area2D
 var screen_size
-export var speed = 600
+export var speed = 300
 signal fire
 
 func _ready() -> void:
@@ -17,9 +17,8 @@ func _process(delta: float) -> void:
 	position += velocity * delta 
 	position.x = clamp(position.x, 0, screen_size.x)
 	position.y = clamp(position.y, 0, screen_size.y)
-	if Input.is_action_just_pressed("ui_fire"):
+	if Input.is_action_pressed("ui_fire"):
 		emit_signal("fire")
-		
 		
 
 

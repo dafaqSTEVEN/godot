@@ -16,21 +16,32 @@ radius = 9.08276
 height = 18.9929
 
 [node name="bullet" type="RigidBody2D"]
+<<<<<<< HEAD
 position = Vector2( -10.2745, -18.7554 )
 z_index = -10
 collision_layer = 2
 collision_mask = 0
 mass = 0.00102041
+=======
+>>>>>>> parent of e8fdf58... init 0.2
 gravity_scale = 0.0
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+<<<<<<< HEAD
 position = Vector2( -1.85492, -0.229462 )
+=======
+position = Vector2( 460.376, 466.58 )
+>>>>>>> parent of e8fdf58... init 0.2
 scale = Vector2( 0.0190259, 0.0392212 )
 frames = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+<<<<<<< HEAD
 position = Vector2( -1.96103, -0.0296936 )
+=======
+position = Vector2( 460.27, 466.99 )
+>>>>>>> parent of e8fdf58... init 0.2
 shape = SubResource( 2 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
