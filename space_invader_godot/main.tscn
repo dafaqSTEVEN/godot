@@ -9,4 +9,5 @@ script = ExtResource( 2 )
 bullet = ExtResource( 3 )
 
 [node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 591.912, 722.292 )
 [connection signal="fire" from="player" to="." method="_on_player_fire"]
