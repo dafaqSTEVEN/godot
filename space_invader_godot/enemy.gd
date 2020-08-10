@@ -21,3 +21,8 @@ func _on_enemy_body_entered(body: Node) -> void:
 
 func move(dis):
 	position += dis
+
+
+func _on_enemy_area_entered(area: Area2D) -> void:
+	area.queue_free()
+	

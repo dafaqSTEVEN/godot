@@ -30,4 +30,5 @@ frames = SubResource( 1 )
 position = Vector2( -834.739, -475.468 )
 scale = Vector2( 1.85043, 1.85043 )
 polygon = PoolVector2Array( 323.87, 220.992, 537.927, 218.614, 578.36, 256.668, 547.441, 280.453, 449.926, 294.723, 321.492, 297.101 )
+[connection signal="area_entered" from="." to="." method="_on_enemy_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_enemy_body_entered"]

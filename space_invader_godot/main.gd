@@ -8,7 +8,7 @@ export (PackedScene) var block
 var screen_size
 var enemy_in_column = 8
 var enemy_row = 3
-var mob_shoot_timer = [0.1,1]
+var mob_shoot_timer = [1,3]
 var mob_distance = [20]
 var dir 
 var mob_speed = Vector2(30,40)
@@ -29,6 +29,7 @@ func _ready() -> void:
 func restart():
 	try = false
 	get_tree().call_group("mob", "queue_free")
+	$UI/end.visible = false
 	$UI/gameover.visible = false
 	$UI.score = 0
 	$UI.life = 3
@@ -135,12 +136,13 @@ func _on_mob_move_timer_timeout() -> void:
 		old_vel = dis
 		get_tree().call_group("mob", "move", dis)	
 		temp_t = lerp(mob_time[0],mob_time[1],(len(item)/float(mob_totals)))
-		print(temp_t)
 		$mob_move_timer.start(temp_t)
 	
 	
 				
 func _process(delta: float) -> void:
+	if len(get_tree().get_nodes_in_group("mob")) == 0:
+		win()
 	if try == true and Input.is_action_just_released("ui_accept"):
 		restart()
 
@@ -153,3 +155,8 @@ func gameover():
 	$ran_timer_enemy.stop()
 	$mob_move_timer.stop()
 	try = true
+	
+func win():
+	$UI/end.visible = true
+	try = true
+	

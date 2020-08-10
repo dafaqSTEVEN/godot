@@ -47,7 +47,6 @@ visible = false
 position = Vector2( 601, 401 )
 z_index = -2
 frames = SubResource( 1 )
-frame = 1
 playing = true
 [connection signal="fire" from="player" to="." method="_on_player_fire"]
 [connection signal="player_hit" from="player" to="." method="_on_player_player_hit"]

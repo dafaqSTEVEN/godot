@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://space_invader/fonts/space_invaders.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://space_invader/UI.gd" type="Script" id=2]
@@ -12,6 +12,10 @@ size = 40
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=3]
+size = 70
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
 size = 70
 font_data = ExtResource( 1 )
 
@@ -73,6 +77,19 @@ margin_right = 1033.59
 margin_bottom = 596.308
 custom_fonts/font = SubResource( 3 )
 text = "Game Over"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="end" type="Label" parent="."]
+margin_left = 363.433
+margin_top = 211.023
+margin_right = 863.433
+margin_bottom = 580.023
+custom_fonts/font = SubResource( 4 )
+text = "You Win ! "
 align = 1
 valign = 1
 __meta__ = {
