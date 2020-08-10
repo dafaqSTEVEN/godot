@@ -12,31 +12,27 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 11.6021
-height = 4.7641
+radius = 12.3526
+height = 0.0
 
 [node name="bullet" type="RigidBody2D" groups=[
 "bullet",
 ]]
-position = Vector2( -2.12132, -0.353554 )
-z_index = -10
+position = Vector2( -0.12132, -0.228554 )
+z_index = -1
 collision_layer = 2
 collision_mask = 2147483650
-gravity_scale = 0.0
-contacts_reported = 10
-contact_monitor = true
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( -0.650032, -0.52273 )
-scale = Vector2( 0.0253578, 0.0253578 )
+scale = Vector2( 0.0263707, 0.0263707 )
 frames = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1.30983, -0.612692 )
 shape = SubResource( 2 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
-position = Vector2( -0.353554, 3.8147e-06 )
+position = Vector2( 0.199226, -0.194135 )
+scale = Vector2( 1.20026, 1.23363 )
 [connection signal="body_entered" from="." to="." method="_on_bullet_body_entered"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
